@@ -85,15 +85,15 @@ const WatchLive = () => {
       <div className="flex justify-center mt-3 px-3">
         <div className="bg-gray-800 p-4 rounded-lg w-full sm:w-[95%] lg:w-[65%] xl:w-[55%]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {["Tsports-Jadoo", "Gazi TV" , "Nagorik TV", "Willow", "Nagorik TV"].map(
+            {["Tsports-Jadoo", "Gazi TV", "Nagorik TV", "Willow", "Nagorik TV"].map(
               (label, index) => (
                 <button
                   key={index}
                   className={`w-full py-2 text-base font-bold rounded-md transition-all duration-300 ${
                     activeTab === index + 1
                       ? "bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md transform scale-105"
-                      : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-100"
-                  }`}
+                      : "bg-white text-gray-700 border border-gray-300"
+                  } hover:bg-gray-200 active:scale-95`} // Hover and active effects added here
                   onClick={() => handleTabClick(index + 1)}
                 >
                   {label}
